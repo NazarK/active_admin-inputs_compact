@@ -1,0 +1,200 @@
+//поправлена высота чекбокса, вместо нее сделана высота всей группы
+//version 1.01 - отображение ошибок в has_many
+//1.02 - fix для sortable
+//1.03 - fix for inputs_has_many
+.inputs.new-line-default {
+  ol > li {
+    clear: both;
+    &.same-line {
+      float: left;
+      clear: none;
+    }
+  }
+
+}
+
+.inputs-compact, .inputs-compact-sm {
+
+  fieldset legend {
+    float: left;
+    width: 20%;
+  }
+
+  .inputs.has_many_fields {
+    > legend {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .choices-group {
+    width: auto;
+    padding-left: 0;
+  }
+
+  ol > li {
+    display: inline-block!important;
+    &.hidden {
+      display: none!important;
+    }
+    float: left;
+    &.hidden {
+      width:0;
+      padding:0!important;
+      min-width: 0;
+    }
+
+    width: 400px;
+    box-sizing: border-box;
+
+
+    &.inputs-input-sm, &.input-sm {
+      width: 200px!important;
+    }
+
+    &.inputs-input-md, &.input-md {
+      width: 400px!important;
+    }
+
+    &.inputs-input-lg, &.input-lg {
+      width: 800px!important;
+    }
+
+    &.input.boolean {
+      box-sizing: border-box;
+      width: 200px;
+      padding-right: 0!important;
+      label {
+        width: 100%;
+        padding-left: 100px;
+      }
+    }
+    .inline-hints {
+      margin-bottom: 5px !important;
+      margin-top: -2px !important;
+      margin-left: 100px;
+    }
+    &.input {
+      min-height: 49px;
+    }
+    label {
+      margin-top: 4px;
+      padding-right: 4px;
+      width: 100px;
+      display: inline-block!important;
+      box-sizing: border-box;
+    }
+    input, select, textarea, input[type=number] {
+      box-sizing: border-box;
+      width: calc( 100% - 100px);
+    }
+
+    input[type=radio] {
+      width: auto;
+    }
+
+    .select2-container {
+      width: calc( 100% - 100px)!important;
+    }
+
+    input[type=checkbox] {
+      width: auto!important;
+    }
+    &.number {
+      input {
+        width: 80px;
+      }
+    }
+  }
+
+  .inputs-new-line, .new-line {
+    clear: both;
+  }
+
+
+
+  .has_many_container {
+    width: auto;
+    display: block;
+    h3 { display: none }
+
+    .handle.ui-sortable-handle {
+      //position: relative !important;
+      padding: 5px 0px !important;
+      margin-top: 1px !important;
+      &:hover {
+        background: #eee;
+      }
+    }
+    fieldset.inputs.has_many_fields {
+      width: 100%;
+      margin-top: 0!important;
+      margin-bottom: 0!important;
+      > ol > li, > ol > li > .field_with_errors {
+        .inline-errors {
+          margin-left: 0;
+        }
+
+        //float: left;
+        display: inline-block;
+        vertical-align: top;
+
+        &.has_many_delete.boolean.input {
+          min-width: 140px;
+        }
+      }
+      .select2-hidden-accessible {
+        width: 0!important;
+        height: 0!important;
+      }
+
+
+      select, .select2-container {
+        //width: 100%!important;
+        vertical-align: top;
+      }
+
+
+      .inputs-input-lg {
+        select, .select2-container {
+          width: 400px!important;
+        }
+      }
+
+      input {
+        vertical-align: top;
+      }
+      .inline-hints {
+        display: inline-block;
+        margin-left: 0!important;
+        img {
+          height: 60px;
+        }
+      }
+    }
+  }
+
+
+}
+
+
+
+.inputs-compact-sm {
+  > ol > li {
+    width: 200px;
+  }
+}
+
+.inputs-w400 {
+  input, select, .select2 {
+    box-sizing: border-box;
+    max-width: 400px;
+  }
+  input[type=number] {
+    max-width: 100px;
+  }
+}
+
+input.compact {
+  max-width: 300px;
+}
